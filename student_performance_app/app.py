@@ -5,7 +5,7 @@ import os
 import joblib
 
 # Correct file paths in Streamlit Cloud
-model_path = os.path.join(os.getcwd(), 'linear_model.pkl')
+model_path = 'student_performance_app/linear_model.pkl'
 scaler_path = os.path.join(os.getcwd(), 'scaler.pkl')
 
 # Load the model and scaler
