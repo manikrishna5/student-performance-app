@@ -1,10 +1,19 @@
 import streamlit as st
-import joblib
 import numpy as np
 
+import os
+import joblib
+
+# Correct file paths in Streamlit Cloud
+model_path = os.path.join(os.getcwd(), 'linear_model.pkl')
+scaler_path = os.path.join(os.getcwd(), 'scaler.pkl')
+
+# Load the model and scaler
+model = joblib.load(model_path)
+scaler = joblib.load(scaler_path)
+
 # Load the saved model and scaler
-model = joblib.load('linear_model.pkl')
-scaler = joblib.load('scaler.pkl')
+
 
 st.title("Student Exam Score Predictor")
 
